@@ -91,9 +91,10 @@ function Home() {
   return (
     <DefaultLayout>
       <HeroSection />
-      <Row className="mt-3" justify="center">
+      <Row className="main-row" justify="center">
         <h1 className="Main-heading-home">
-          Please Choose A Time Slot 🚗
+          Please Select a<span className="ml-2 mr-2"> Time Slot</span> For
+          Booking 🚗
         </h1>
         <Col lg={20} sm={24} className="d-flex justify-content-center">
           <RangePicker

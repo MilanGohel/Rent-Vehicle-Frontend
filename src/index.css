@@ -663,7 +663,7 @@ ul {
   width: 120px;
 }
 .heading-service {
-  color: white;
+  color: white !important;
 }
 .icon-image {
   height: 105px;
@@ -725,10 +725,19 @@ ul {
   background-color: white;
   font-weight: 600;
 }
-.Main-heading-home{
+.Main-heading-home {
   display: flex;
   justify-content: center;
   font-size: 44px !important;
   font-weight: 500 !important;
   margin-left: 2rem;
+  color: white !important;
+  margin-bottom: 2.5rem;
+}
+.Main-heading-home span {
+  color: #00ffffdf;
+}
+.main-row {
+  margin-top: 6.5rem;
+  margin-bottom: 4.5rem;
 }

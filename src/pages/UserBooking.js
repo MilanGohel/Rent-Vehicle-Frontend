@@ -20,12 +20,13 @@ function UserBookings() {
     <DefaultLayout>
       {loading && <Spinner />}
       <h3
-        className="text-center mt-4"
+        className="text-center"
         style={{
-          color: "#00ffffdf",
+          color: "white",
+          marginTop: "5.2rem",
         }}
       >
-        All Bookings
+        {user.admin ? "All Recent Bookings" : "Your Booking History"}
       </h3>
       <Row justify="center" gutter={16}>
         <Col lg={16} sm={24} style={{ color: "darkslategray" }}>
@@ -51,7 +52,7 @@ function UserBookings() {
                         </p>
                       )}
                       <p>
-                        User : <b>{booking.user.email}</b>
+                        User : <b>{booking.user?.email || "No email"}</b>
                       </p>
                       <p>
                         Total Minutes : <b>{booking.totalMins}</b>
@@ -74,7 +75,8 @@ function UserBookings() {
                         Transaction Id : <b>{booking.transactionId}</b>
                       </p>
                       <p>
-                        User Contact : <b>{booking.user.phone}</b>
+                        User Contact :{" "}
+                        <b>{booking.user?.phone || "No phone"}</b>
                       </p>
                       <p>
                         From: <b>{booking.bookedTimeSlots.from}</b>

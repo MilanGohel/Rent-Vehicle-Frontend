@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Car-Rental-App
+- It is a Rent a car website where Customers can book the cars by paying through Stripe. 
+- Admin can see the bookings and can manage the cars. 
+- If a car is booked for a time span no other customer can book the same car on same time span.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies Used
 
-## Available Scripts
+- ReactJs
+- Nodejs
+- Express.js
+- MongoDB
 
-In the project directory, you can run:
+## Technologies and Tools used in Project with the respective versions
 
-### `npm start`
+### IDE
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| Sr. No. |     Technology     | Version |
+| :------ | :----------------: | :-----: |
+| 1.      | Visual Studio Code |  1.65   |
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Database
 
-### `npm test`
+| Sr. No. | Technology | Version |
+| :------ | :--------: | :-----: |
+| 1.      |  MongoDB   |   3.6   |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Programming Language and NPM Packages
 
-### `npm run build`
+| Sr. No. |  Technology  | Version |
+| :------ | :----------: | :-----: |
+| 1.      |   React.js   | 17.0.2 |
+| 2.      |   Node.js    | 16.13.1 |
+| 3.      |   Stripe     | 8.194.0 |
+| 4.      |   Nodemon    |  2.0.7  |
+| 5.      |  Express.js  |  4.17.1   |
+| 6.      |   Mongoose   | 6.0.13  |
+| 7.      |  styled-components   |  5.3.3  |
+| 8.      |   uuid       |  8.3.2  |
+| 9.      |   react-redux       |  7.2.6 |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### [User Panel Demo](https://www.youtube.com/watch?v=l4MMxoHn__8) (click to open the video)
+[![user demo](https://img.youtube.com/vi/l4MMxoHn__8/sddefault.jpg)](https://www.youtube.com/watch?v=l4MMxoHn__8)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### [Admin Panel Demo](https://www.youtube.com/watch?v=2JC6r0FfGdo) (click to open the video)
+[![admin demo](https://img.youtube.com/vi/2JC6r0FfGdo/sddefault.jpg)](https://www.youtube.com/watch?v=2JC6r0FfGdo)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
