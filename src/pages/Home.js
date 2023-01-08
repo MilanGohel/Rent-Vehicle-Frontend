@@ -39,7 +39,7 @@ function Home() {
           "MMM DD yyyy HH:mm"
         );
         var temp = [];
-
+        var filterCars = [];
         for (var car of cars) {
           if (car.bookedTimeSlots.length == 0) {
             temp.push(car);
@@ -71,7 +71,8 @@ function Home() {
                   "[]"
                 )
               ) {
-                console.log("nomi");
+                //console.log(car);
+                filterCars.push(car);
               } else {
                 temp.push(car);
                 // return;
@@ -86,6 +87,10 @@ function Home() {
       var temp = cars;
     }
     var temp = [...new Set(temp)];
+    temp =
+      filterCars?.length > 0
+        ? temp.filter((item) => !filterCars.includes(item)) //filtering the booked cars.....
+        : temp;
     setTotalcars(temp);
   }
   return (
