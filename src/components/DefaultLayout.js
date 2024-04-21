@@ -67,13 +67,13 @@ function DefaultLayout(props) {
                     cursor: "pointer",
                   }}
                 >
-                  Sandhu Cars
+                  DriveNow
                 </h1>
               </div>
             </div>
           </Link>
           <Dropdown overlay={menu} placement="bottomCenter">
-            <Button>{"Wellcome " + user.username}</Button>
+            <Button>{"Welcome " + user.username}</Button>
           </Dropdown>
           {/* <button>user</button> */}
         </div>

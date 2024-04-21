@@ -23,7 +23,7 @@ const Footer = () => {
                     <PushpinOutlined className="f-icons" />
                     <h4>Find us</h4>
                     <span>
-                      Shop Number 12, Abrar Center, wahdat road Lahore
+                      Rajkot
                     </span>
                   </div>
                 </div>
@@ -33,7 +33,7 @@ const Footer = () => {
                 <div className="single-cta">
                   <div className="cta-text">
                     <h4>Call us</h4>
-                    <span>+923310145083</span>
+                    <span>+918888888888</span>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@ const Footer = () => {
                 <div className="single-cta">
                   <div className="cta-text">
                     <h4>Mail us</h4>
-                    <span>sandhu@gmail.com</span>
+                    <span>drivenow@gmail.com</span>
                   </div>
                 </div>
               </div>
@@ -61,7 +61,7 @@ const Footer = () => {
                         alt="logo"
                       />
                       <h3 style={{ color: "#00ffffdf", fontFamily: "Barrio" }}>
-                        Sandhu Cars
+                        DriveNow
                       </h3>
                     </a>
                   </div>

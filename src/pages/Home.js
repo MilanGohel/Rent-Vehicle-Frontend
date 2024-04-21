@@ -96,7 +96,7 @@ function Home() {
   return (
     <DefaultLayout>
       <HeroSection />
-      <Row className="main-row" justify="center">
+      {/* <Row className="main-row" justify="center">
         <h1 className="Main-heading-home">
           Please Select a<span className="ml-2 mr-2"> Time Slot</span> For
           Booking 🚗
@@ -110,11 +110,12 @@ function Home() {
             style={{ height: "3.5rem", width: "37rem" }}
           />
         </Col>
-      </Row>
+      </Row> */}
       {loading == true && <Spinner />}
-      {from && to && (
+      {(
         <Row justify="center" gutter={[24, 16]}>
-          {totalCars.map((car) => {
+          {totalCars && totalCars.map((car) => {
+            console.log("helo");
             return (
               <Col xl={5} lg={5} md={8} sm={12} xs={24}>
                 <Link to={`/booking/${car._id}`}>

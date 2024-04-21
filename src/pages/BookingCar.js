@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Divider, DatePicker, Checkbox, Modal } from "antd";
+import { Row, Col, Divider, DatePicker, Checkbox, Modal, Select } from "antd";
 import {
   DollarCircleOutlined,
   TagsOutlined,
@@ -29,6 +29,10 @@ function BookingCar() {
   const [driver, setdriver] = useState(false);
   const [totalAmount, setTotalAmount] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [payment, setPayment] = useState(false);
+  const handleChange = () =>{
+      setPayment(!payment);
+  } 
   useEffect(() => {
     if (cars.length == 0) {
       dispatch(getAllCars());
@@ -112,6 +116,12 @@ function BookingCar() {
                   <span className="booking-icons">
                     <TagsOutlined />
                   </span>
+                  <span className="car-data">Brand</span>
+                </p>
+                <p style={{ display: "flex", flexDirection: "row" }}>
+                  <span className="booking-icons">
+                    <TagsOutlined />
+                  </span>
                   <span className="car-data">Model</span>
                 </p>
                 <p style={{ display: "flex", flexDirection: "row" }}>
@@ -135,7 +145,10 @@ function BookingCar() {
               </div>
               <div className="car-headData">
                 <p>
-                  <span className="car-data2">{car.name}</span>
+                  <span className="car-data2">{car.brand}</span>
+                </p>
+                <p>
+                  <span className="car-data2">{car.modelName}</span>
                 </p>
                 <p>
                   <span className="car-data2">{car.rentPerHour} Rs/-</span>
@@ -200,11 +213,18 @@ function BookingCar() {
                   <h3 style={{ color: "white" }}>
                     Total Amount : {totalAmount}
                   </h3>
+                  <span style={{color: "white"}}>Payment Type</span>
+                  <Select defaultValue="cash" style={{ width: 120 ,borderRadius: 100}} onChange={handleChange}>
+                    <Select.Option value="cash">Cash</Select.Option>
+                    <Select.Option value="card">Card</Select.Option>
+                  </Select>
+                    {
+                      payment ?
                   <StripeCheckout
                     token={onToken}
                     shippingAddress
                     billingAddress={true}
-                    currency="pkr"
+                    currency="inr"
                     amount={totalAmount * 100}
                     stripeKey="pk_test_51K8lJeSGkXsHpk6s64EtVo37lQmikIps217LhE2fmpwRMj2Ro0iKQvYXcFkMBHjjM4Z6BC5uvxV8XsTbKQFfbQ5y000eSg9RUb"
                   >
@@ -221,6 +241,20 @@ function BookingCar() {
                       Book Now
                     </button>
                   </StripeCheckout>
+                      :
+                      <button
+                      className="btn1"
+                      style={{
+                        marginBottom: "4px",
+                        borderRadius: "5px",
+                        fontWeight: "500",
+                        outline: "none",
+                        border: "none",
+                      }}
+                    >
+                      Book Now
+                    </button>
+                    }
                 </div>
               )}
             </div>

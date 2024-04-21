@@ -5,7 +5,7 @@ export const bookCar = (reqObj) => async (dispatch) => {
 
   try {
     await axios.post(
-      "https://sandhucar-backend.cyclic.app/api/bookings/bookcar",
+      "http://localhost:8000/api/bookings/bookcar",
       reqObj
     );
 
@@ -26,7 +26,7 @@ export const getAllBookings = () => async (dispatch) => {
 
   try {
     const response = await axios.get(
-      "https://sandhucar-backend.cyclic.app/api/bookings/getallbookings"
+      "http://localhost:8000/api/bookings/getallbookings"
     );
     dispatch({ type: "GET_ALL_BOOKINGS", payload: response.data });
     dispatch({ type: "LOADING", payload: false });

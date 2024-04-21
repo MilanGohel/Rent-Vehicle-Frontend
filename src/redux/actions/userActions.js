@@ -6,9 +6,10 @@ export const userLogin = (reqObj) => async (dispatch) => {
 
   try {
     const response = await axios.post(
-      "https://sandhucar-backend.cyclic.app/api/users/login",
+      "http://localhost:8000/api/users/login",
       reqObj
     );
+    console.log(response);
     const { admin, username, _id } = response.data;
     localStorage.setItem("user", JSON.stringify({ admin, username, _id }));
     message.success("Login success");
@@ -27,10 +28,12 @@ export const userRegister = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
+    console.log("register");
     const response = await axios.post(
-      "https://sandhucar-backend.cyclic.app/api/users/register",
+      "http://localhost:8000/api/users/register",
       reqObj
     );
+    console.log(response)
     message.success("Registration successfull");
     setTimeout(() => {
       window.location.href = "/login";

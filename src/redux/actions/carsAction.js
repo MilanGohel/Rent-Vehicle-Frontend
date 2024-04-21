@@ -6,7 +6,7 @@ export const getAllCars = () => async (dispatch) => {
 
   try {
     const response = await axios.get(
-      "https://sandhucar-backend.cyclic.app/api/cars/getallcars"
+      "http://localhost:8000/editcar/api/cars/getallcars"
     );
     dispatch({ type: "GET_ALL_CARS", payload: response.data });
     dispatch({ type: "LOADING", payload: false });
@@ -21,7 +21,7 @@ export const addCar = (reqObj) => async (dispatch) => {
 
   try {
     await axios.post(
-      "https://sandhucar-backend.cyclic.app/api/cars/addcar",
+      "http://localhost:8000/editcar/api/cars/addcar",
       reqObj
     );
 
@@ -41,7 +41,7 @@ export const editCar = (reqObj) => async (dispatch) => {
 
   try {
     await axios.put(
-      "https://sandhucar-backend.cyclic.app/api/cars/editcar",
+      "http://localhost:8000/editcar/api/cars/editcar",
       reqObj
     );
 
@@ -61,7 +61,7 @@ export const deleteCar = (reqObj) => async (dispatch) => {
 
   try {
     await axios.post(
-      "https://sandhucar-backend.cyclic.app/api/cars/deletecar",
+      "http://localhost:8000/editcar/api/cars/deletecar",
       reqObj
     );
 

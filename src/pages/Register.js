@@ -9,21 +9,26 @@ function Register() {
   const dispatch = useDispatch();
 
   function onFinish(values) {
-    if (
-      values.password.length >= 8 &&
-      values.password.length < 23 &&
-      values.phone.length >= 11 &&
-      values.phone.length < 13
-    ) {
-      dispatch(userRegister(values));
-      console.log(values);
-    } else if (values.password.length > 24) {
-      message.error("Password is very lengthy to remember");
-    } else if (values.password.length < 8) {
-      message.error("Password is weak");
-    } else if (values.phone.length > 13 || values.phone.length < 11) {
-      message.error("Invalid Phone Number");
-    }
+    console.log(values);
+    if(!values.password || !values.phone || !values.username || !values.email) return;
+
+    dispatch(userRegister(values));
+    // if (
+    //   values.password.length >= 8 &&
+    //   values.password.length < 23 &&
+    //   values.phone.length >= 11 &&
+    //   values.phone.length < 13
+    // ) {
+    //   console.log("helo");
+    //   console.log(values);
+    // } else if (values.password.length > 24) {
+    //   message.error("Password is very lengthy to remember");
+    // } else if (values.password.length < 8) {
+    //   message.error("Password is weak");
+    // } else if (values.phone.length > 13 || values.phone.length < 11) {
+    //   message.error("Invalid Phone Number");
+    // }
+
   }
   return (
     <div className="login">

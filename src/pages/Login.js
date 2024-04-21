@@ -7,8 +7,11 @@ import { userLogin } from "../redux/actions/userActions";
 function Login() {
   const dispatch = useDispatch();
   function onFinish(values) {
-    dispatch(userLogin(values));
+    console.log("helo");
+    if(!values.email || !values.password) return;
+    
     console.log(values);
+    dispatch(userLogin(values));
   }
   return (
     <div className="login">
