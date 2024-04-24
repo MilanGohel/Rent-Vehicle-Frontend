@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import {React, useState, useEffect } from "react";
 import DefaultLayout from "../components/DefaultLayout";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllBookings } from "../redux/actions/bookingActions";
@@ -9,9 +9,10 @@ import defaultcar from "../images/defaultcar.jpg";
 function UserBookings() {
   const dispatch = useDispatch();
   const { bookings } = useSelector((state) => state.bookingsReducer);
+  console.log(bookings)
   const { loading } = useSelector((state) => state.alertsReducer);
   const user = JSON.parse(localStorage.getItem("user"));
-
+  
   useEffect(() => {
     dispatch(getAllBookings());
   }, []);
@@ -30,7 +31,7 @@ function UserBookings() {
       </h3>
       <Row justify="center" gutter={16}>
         <Col lg={16} sm={24} style={{ color: "darkslategray" }}>
-          {user.admin
+          {(bookings.length > 0) && user.admin
             ? bookings.map((booking) => {
                 return (
                   <Row
@@ -111,7 +112,7 @@ function UserBookings() {
                 );
               })
             : bookings
-                .filter((o) => o.user._id == user._id)
+                .filter((o) => o.user._id === user._id)
                 .map((booking) => {
                   return (
                     <Row

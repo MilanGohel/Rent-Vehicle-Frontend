@@ -1,0 +1,8 @@
+/* Custom CSS to hide the clear button */
+.react-datepicker__close-icon {
+    display: none;
+  }
+  
+  .ant-form-item-required {
+    color: black !important;
+}

@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import "antd/dist/antd.css";
 import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
@@ -10,7 +11,6 @@ import AddCar from "./pages/AddCar";
 import EditCar from "./pages/EditCar";
 import AdminHome from "./pages/AdminHome";
 import Contact from "./components/Contact";
-
 function App() {
   return (
     <div className="App">
